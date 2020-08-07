@@ -1,0 +1,20 @@
+.item {
+  display: flex;
+}
+
+.item > * {
+  margin-right: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.buttonsWrapper {
+  flex-direction: row;
+  justify-content: flex-end;
+  margin-right: -1rem;
+}
+
+.buttonsWrapper > * {
+  margin-right: 1rem;
+}

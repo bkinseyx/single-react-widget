@@ -1,0 +1,34 @@
+{
+	"name": "single-react-widget",
+	"version": "1.0.0",
+	"description": "Single React Widget",
+	"scripts": {
+		"build": "npm run copy-sources && npm run copy-assets && npm run build-react && npm run cp-react-assets && liferay-npm-bundler",
+		"build-react": "cd react-app && npm run build && cd ..",
+		"cp-react-assets": "shx mkdir -p build/static && shx cp -r react-app/build/static/* build/static",
+		"copy-assets": "lnbs-copy-assets",
+		"translate": "lnbs-translate",
+		"deploy": "npm run build && lnbs-deploy",
+		"start": "lnbs-start",
+		"copy-sources": "lnbs-copy-sources"
+	},
+	"main": "index.js",
+	"portlet": {
+		"com.liferay.portlet.display-category": "category.react",
+		"com.liferay.portlet.header-portlet-css": "/css/styles.css",
+		"com.liferay.portlet.instanceable": true,
+		"javax.portlet.name": "singlereactwidget",
+		"javax.portlet.security-role-ref": "power-user,user",
+		"javax.portlet.resource-bundle": "content.Language"
+	},
+	"dependencies": {},
+	"devDependencies": {
+		"copy-webpack-plugin": "4.6.0",
+		"liferay-npm-build-support": "^2.18.8",
+		"liferay-npm-bundler": "^2.18.8",
+		"shx": "^0.3.2",
+		"webpack": "4.29.6",
+		"webpack-cli": "3.3.0",
+		"webpack-dev-server": "3.2.1"
+	}
+}

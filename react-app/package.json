@@ -1,0 +1,64 @@
+{
+  "name": "react-app",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "env-cmd react-scripts build && shx rm build/static/media/*.snap",
+    "test": "react-scripts test",
+    "storybook": "start-storybook -p 9009 -s public",
+    "build-storybook": "build-storybook -s public",
+    "eject": "react-scripts eject"
+  },
+  "homepage": "/o/single-react-theme/images/react",
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "proxy": "http://localhost:8080",
+  "dependencies": {
+    "@reduxjs/toolkit": "^1.2.5",
+    "@types/react-jsonschema-form": "^1.7.4",
+    "classnames": "^2.2.6",
+    "react": "^16.13.1",
+    "react-bootstrap": "^1.3.0",
+    "react-dom": "^16.13.1",
+    "react-input-mask": "^2.0.4",
+    "react-jsonschema-form": "^1.8.1",
+    "react-redux": "^7.2.0"
+  },
+  "devDependencies": {
+    "@storybook/addon-actions": "^5.3.19",
+    "@storybook/addon-docs": "^5.3.19",
+    "@storybook/addon-links": "^5.3.19",
+    "@storybook/addons": "^5.3.19",
+    "@storybook/preset-create-react-app": "^3.1.4",
+    "@storybook/react": "^5.3.19",
+    "@testing-library/jest-dom": "^4.2.4",
+    "@testing-library/react": "^9.3.2",
+    "@testing-library/user-event": "^7.1.2",
+    "@types/jest": "^24.0.0",
+    "@types/node": "^12.0.0",
+    "@types/react": "^16.9.0",
+    "@types/react-dom": "^16.9.0",
+    "@types/react-input-mask": "^2.0.5",
+    "@types/react-redux": "^7.1.7",
+    "@types/webpack-env": "^1.15.2",
+    "bootstrap": "^4.5.0",
+    "env-cmd": "^10.1.0",
+    "node-html-parser": "^1.2.20",
+    "react-scripts": "3.4.1",
+    "typescript": "~3.8.2"
+  }
+}
